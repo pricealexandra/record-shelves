@@ -33,7 +33,7 @@ export const reducer = (state, action) => {
         ...state,
         [action.shelfId]: {
           ...state[action.shelfId],
-          records: state[action.shelfId].records.concat(action.recordId),
+          records: state[action.shelfId].records.includes(action.recordId) ? state[action.shelfId].records : state[action.shelfId].records.concat(action.recordId),
         },
       };
     case 'removeRecordFromShelf':

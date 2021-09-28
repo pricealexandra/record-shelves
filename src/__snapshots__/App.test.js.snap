@@ -54,6 +54,7 @@ exports[`App can add a shelf 1`] = `
                   <label
                     class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
                     data-shrink="false"
+                    id="add-to-shelf"
                   >
                     Add to shelf
                   </label>
@@ -63,6 +64,7 @@ exports[`App can add a shelf 1`] = `
                   >
                     <div
                       aria-haspopup="listbox"
+                      aria-labelledby="add-to-shelf"
                       class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
                       role="button"
                       tabindex="0"
@@ -135,6 +137,7 @@ exports[`App can add a shelf 1`] = `
           >
             <ul
               class="MuiList-root MuiList-padding"
+              data-testid="shelf"
               style="display: flex; flex-direction: row; overflow: scroll;"
             >
               <p>
@@ -164,88 +167,6 @@ exports[`App can add a shelf 1`] = `
 `;
 
 exports[`App can remove a shelf 1`] = `
-<DocumentFragment>
-  <div
-    class="MuiContainer-root MuiContainer-maxWidthLg"
-  >
-    <h1>
-      Record Shelves App
-    </h1>
-    <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3"
-    >
-      <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3"
-      >
-        <h2>
-          Records
-        </h2>
-        <ul
-          class="MuiList-root MuiList-padding"
-          style="background-color: rgb(245, 245, 245); height: calc(100vh - 12rem); overflow: scroll;"
-        >
-          <li
-            class="MuiListItem-root MuiListItem-gutters"
-          >
-            <div
-              class="MuiPaper-root MuiCard-root MuiPaper-elevation1 MuiPaper-rounded"
-              style="width: 260px;"
-            >
-              <div
-                class="MuiCardContent-root"
-              >
-                <p>
-                  Title: Dirty Dancing
-                </p>
-                <p>
-                  Artist(s):Swayzak
-                </p>
-                <p>
-                  Label: !K7 Records
-                </p>
-                <p>
-                  Formats: Vinyl
-                </p>
-              </div>
-              <div
-                class="MuiCardActions-root MuiCardActions-spacing"
-              />
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-9"
-      >
-        <h2>
-          Shelves
-        </h2>
-        <ul
-          class="MuiList-root MuiList-padding"
-          style="height: calc(100vh - 12rem); overflow: scroll;"
-        >
-          <button
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained"
-            tabindex="0"
-            type="button"
-          >
-            <span
-              class="MuiButton-label"
-            >
-              Add Shelf
-            </span>
-            <span
-              class="MuiTouchRipple-root"
-            />
-          </button>
-        </ul>
-      </div>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`App fetches records 1`] = `
 <DocumentFragment>
   <div
     class="MuiContainer-root MuiContainer-maxWidthLg"

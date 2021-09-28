@@ -67,6 +67,7 @@ export default function Shelf({ records, shelf, dispatch }) {
         <Droppable droppableId={shelf.id} direction="horizontal">
           {(provided, snapshot) => (
             <List
+              data-testid="shelf"
               ref={provided.innerRef}
               style={{
                 display: 'flex',

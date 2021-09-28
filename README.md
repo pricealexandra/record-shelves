@@ -25,6 +25,9 @@ Welcome to the Record Shelves App, a tool for organizing your record collection 
 | Only add record once to shelf | Defect | A record can be added to a specific shelf multiple times, which leads to jarring behavior when dragging one of the duplicates around or removing it. Only one copy of a record should be allowed on a given shelf.
 | Add tests | Debt | The test coverage for the app's functionality is lacking, improve coverage on key interactions. |
 
+ideas:
+- disable add to shelf if already added
+
 ## Developing
 
 In the project directory, you can run:

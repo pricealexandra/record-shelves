@@ -1,4 +1,5 @@
 import { fireEvent, render, screen, waitFor, within } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 
 import { enableFetchMocks } from 'jest-fetch-mock';
 
@@ -54,5 +55,27 @@ describe('App', () => {
 
     fireEvent.click(screen.getByText('Remove'));
     expect(asFragment()).toMatchSnapshot();
+  });
+
+  it('can add a record to a shelf', async () => {
+    const { asFragment } = render(<App />);
+    await waitFor(() => expect(fetch).toHaveBeenCalledTimes(1));
+
+    fireEvent.click(screen.getByText('Add Shelf'));
+    fireEvent.change(screen.getByTestId('add-shelf'), {
+      target: { value: 'first shelf' },
+    });
+    fireEvent.click(screen.getByText('Submit'));
+
+    fireEvent.mouseDown(screen.getByLabelText('Add to shelf'));
+    const options = within(screen.getByRole("listbox"));
+    fireEvent.click(options.getByText('first shelf'));
+
+    const shelf = screen.getByTestId("shelf");
+    expect(shelf).toHaveTextContent("Dirty Dancing");
+  });
+
+  it('can only add the same record to the same shelf once', async () => {
+    // TODO
   });
 });
