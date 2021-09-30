@@ -75,7 +75,23 @@ describe('App', () => {
     expect(shelf).toHaveTextContent("Dirty Dancing");
   });
 
-  it('can only add the same record to the same shelf once', async () => {
-    // TODO
+  it('can add a record to a shelf only once', async () => {
+    const { asFragment } = render(<App />);
+    await waitFor(() => expect(fetch).toHaveBeenCalledTimes(1));
+
+    fireEvent.click(screen.getByText('Add Shelf'));
+    fireEvent.change(screen.getByTestId('add-shelf'), {
+      target: { value: 'first shelf' },
+    });
+    fireEvent.click(screen.getByText('Submit'));
+
+    fireEvent.mouseDown(screen.getByLabelText('Add to shelf'));
+    const options = within(screen.getByRole("listbox"));
+    fireEvent.click(options.getByText('first shelf'));
+
+    const shelf = screen.getByTestId("shelf");
+    expect(shelf).toHaveTextContent("Dirty Dancing");
+
+    expect(options.getByText('first shelf')).toHaveAttribute('aria-disabled');
   });
 });

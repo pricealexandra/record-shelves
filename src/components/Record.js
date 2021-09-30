@@ -50,7 +50,7 @@ export default function Record({ record, shelf, shelves, dispatch }) {
                 }
               >
                 {Object.values(shelves).map(option => (
-                  <MenuItem key={option.id} value={option.id}>
+                  <MenuItem key={option.id} value={option.id} disabled={option.records.includes(record.id)}>
                     {option.name}
                   </MenuItem>
                 ))}
