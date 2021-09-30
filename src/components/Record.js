@@ -8,7 +8,7 @@ import {
   ListItem,
   MenuItem,
   Select,
-} from '@material-ui/core';
+} from '@mui/material';
 
 export default function Record({ record, shelf, shelves, dispatch }) {
   return (

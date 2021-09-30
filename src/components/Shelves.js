@@ -1,6 +1,6 @@
 import { useCallback, useState } from 'react';
 
-import { Button, Input, List } from '@material-ui/core';
+import { Button, Input, List } from '@mui/material';
 
 import Shelf from './Shelf';
 

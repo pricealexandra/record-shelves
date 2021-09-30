@@ -6,7 +6,7 @@ import {
   Input,
   List,
   ListItem,
-} from '@material-ui/core';
+} from '@mui/material';
 
 import { Droppable, Draggable } from 'react-beautiful-dnd';
 

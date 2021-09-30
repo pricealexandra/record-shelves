@@ -1,11 +1,17 @@
-import { List } from '@material-ui/core';
+import { List } from '@mui/material';
+import { Pagination } from '@mui/material';
 
 import Record from './Record';
 
-export default function RecordsContainer({ records, shelves, dispatch }) {
+export default function RecordsContainer({ records, recordPages, fetchRecords, shelves, dispatch }) {
+  const changePage = (event, page) => {
+    fetchRecords(page)
+  }
+
   return (
     <>
       <h2>Records</h2>
+      <Pagination count={recordPages} onChange={changePage}></Pagination>
       <List
         style={{
           backgroundColor: '#f5f5f5',

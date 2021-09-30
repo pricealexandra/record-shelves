@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useReducer, useState } from 'react';
 
-import { Container, Grid } from '@material-ui/core';
+import { Container, Grid } from '@mui/material';
 
 import { DragDropContext } from 'react-beautiful-dnd';
 
@@ -11,6 +11,8 @@ import Shelves from './components/Shelves';
 
 export default function App() {
   const [records, setRecords] = useState([]);
+  const [totalRecordPages, setTotalRecordPages] = useState();
+  const [recordPage, setRecordPage] = useState(1);
 
   const [shelves, dispatch] = useReducer(reducer, {});
 
@@ -42,27 +44,32 @@ export default function App() {
     [dispatch],
   );
 
+  const fetchRecords = (page) => {
+    setRecordPage(page);
+  }
+
   useEffect(() => {
-    fetch(
-      'https://api.discogs.com/users/blacklight/collection/folders/0/releases',
-    )
-      .then(resp => resp.json())
-      .then(json => {
-        setRecords(
-          json.releases.map(release => {
-            const { id, basic_information: info } = release;
-            return {
-              id: `${id}`,
-              title: info.title,
-              formats: info.formats.map(format => format.name),
-              label: info.labels?.[0]?.name ?? '',
-              artists: info.artists.map(artist => artist.name),
-              date: info.year,
-            };
-          }),
-        );
-      });
-  }, []);
+      fetch(
+        `https://api.discogs.com/users/blacklight/collection/folders/0/releases?page=${recordPage}&per_page=10`,
+      )
+        .then(resp => resp.json())
+        .then(json => {
+          setRecords(
+            json.releases.map(release => {
+              const { id, basic_information: info } = release;
+              return {
+                id: `${id}`,
+                title: info.title,
+                formats: info.formats.map(format => format.name),
+                label: info.labels?.[0]?.name ?? '',
+                artists: info.artists.map(artist => artist.name),
+                date: info.year,
+              };
+            }),
+          );
+          setTotalRecordPages(json.pagination.pages)
+        });
+    }, [recordPage]);
 
   return (
     <Container>
@@ -72,6 +79,8 @@ export default function App() {
         <Grid item xs={3}>
           <RecordsContainer
             records={records}
+            recordPages={totalRecordPages}
+            fetchRecords={fetchRecords}
             shelves={shelves}
             dispatch={dispatch}
           />

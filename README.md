@@ -26,7 +26,7 @@ Welcome to the Record Shelves App, a tool for organizing your record collection 
 | Add tests | Debt | The test coverage for the app's functionality is lacking, improve coverage on key interactions. |
 
 ideas:
-- disable add to shelf if already added
+- fix weird border
 
 ## Developing
 
