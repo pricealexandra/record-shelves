@@ -189,7 +189,7 @@ exports[`App can add a shelf 1`] = `
               >
                 <div
                   class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
-                  style="min-width: 120px;"
+                  style="min-width: 140px;"
                 >
                   <label
                     class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
@@ -238,12 +238,10 @@ exports[`App can add a shelf 1`] = `
                       class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
                     >
                       <legend
-                        class="css-1a1ihhj"
+                        class="css-dhh0px"
                       >
-                        <span
-                          class="notranslate"
-                        >
-                          ​
+                        <span>
+                          Add to shelf
                         </span>
                       </legend>
                     </fieldset>

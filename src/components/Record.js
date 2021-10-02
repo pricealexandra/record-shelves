@@ -35,10 +35,11 @@ export default function Record({ record, shelf, state, dispatch }) {
               Remove
             </Button>
           ) : Object.keys(state.shelves).length ? (
-            <FormControl style={{ minWidth: '120px' }}>
+            <FormControl style={{ minWidth: '140px' }}>
               <InputLabel id="add-to-shelf">Add to shelf</InputLabel>
               <Select
                 labelId="add-to-shelf"
+                label="Add to shelf"
                 data-testid="add-shelf"
                 value=""
                 onChange={evt => {
