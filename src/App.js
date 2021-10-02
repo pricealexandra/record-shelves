@@ -10,11 +10,10 @@ import RecordsContainer from './components/RecordsContainer';
 import Shelves from './components/Shelves';
 
 export default function App() {
-  const [records, setRecords] = useState([]);
   const [totalRecordPages, setTotalRecordPages] = useState();
   const [recordPage, setRecordPage] = useState(1);
 
-  const [shelves, dispatch] = useReducer(reducer, {});
+  const [state, dispatch] = useReducer(reducer, {displayedRecords: [], shelvedRecords: {}, shelves: {}});
 
   const onDragEnd = useCallback(
     result => {
@@ -54,8 +53,7 @@ export default function App() {
       )
         .then(resp => resp.json())
         .then(json => {
-          setRecords(
-            json.releases.map(release => {
+          const currentRecords = json.releases.map(release => {
               const { id, basic_information: info } = release;
               return {
                 id: `${id}`,
@@ -65,8 +63,11 @@ export default function App() {
                 artists: info.artists.map(artist => artist.name),
                 date: info.year,
               };
-            }),
-          );
+            });
+          dispatch({
+            type: 'updateDisplayedRecords',
+            displayedRecords: currentRecords,
+          })
           setTotalRecordPages(json.pagination.pages)
         });
     }, [recordPage]);
@@ -78,17 +79,16 @@ export default function App() {
       <Grid container spacing={3}>
         <Grid item xs={3}>
           <RecordsContainer
-            records={records}
             recordPages={totalRecordPages}
             fetchRecords={fetchRecords}
-            shelves={shelves}
+            state={state}
             dispatch={dispatch}
           />
         </Grid>
 
         <Grid item xs={9}>
           <DragDropContext onDragEnd={onDragEnd}>
-            <Shelves records={records} shelves={shelves} dispatch={dispatch} />
+            <Shelves state={state} dispatch={dispatch} />
           </DragDropContext>
         </Grid>
       </Grid>

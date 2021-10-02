@@ -13,6 +13,7 @@ describe('App', () => {
     fetch.doMock();
     fetch.mockResponseOnce(
       JSON.stringify({
+        pagination: {pages: 10},
         releases: [
           {
             id: 76035,
@@ -58,7 +59,7 @@ describe('App', () => {
   });
 
   it('can add a record to a shelf', async () => {
-    const { asFragment } = render(<App />);
+    render(<App />);
     await waitFor(() => expect(fetch).toHaveBeenCalledTimes(1));
 
     fireEvent.click(screen.getByText('Add Shelf'));
@@ -76,7 +77,7 @@ describe('App', () => {
   });
 
   it('can add a record to a shelf only once', async () => {
-    const { asFragment } = render(<App />);
+    render(<App />);
     await waitFor(() => expect(fetch).toHaveBeenCalledTimes(1));
 
     fireEvent.click(screen.getByText('Add Shelf'));

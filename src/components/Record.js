@@ -10,7 +10,7 @@ import {
   Select,
 } from '@mui/material';
 
-export default function Record({ record, shelf, shelves, dispatch }) {
+export default function Record({ record, shelf, state, dispatch }) {
   return (
     <ListItem key={record.id}>
       <Card style={{ width: '260px' }}>
@@ -34,22 +34,27 @@ export default function Record({ record, shelf, shelves, dispatch }) {
             >
               Remove
             </Button>
-          ) : Object.keys(shelves).length ? (
+          ) : Object.keys(state.shelves).length ? (
             <FormControl style={{ minWidth: '120px' }}>
               <InputLabel id="add-to-shelf">Add to shelf</InputLabel>
               <Select
                 labelId="add-to-shelf"
                 data-testid="add-shelf"
                 value=""
-                onChange={evt =>
+                onChange={evt => {
                   dispatch({
                     type: 'addRecordToShelf',
                     shelfId: evt.target.value,
                     recordId: record.id,
                   })
+                  dispatch({
+                    type: 'updateShelvedRecords',
+                    shelvedRecord: record,
+                  })
+                }
                 }
               >
-                {Object.values(shelves).map(option => (
+                {Object.values(state.shelves).map(option => (
                   <MenuItem key={option.id} value={option.id} disabled={option.records.includes(record.id)}>
                     {option.name}
                   </MenuItem>

@@ -13,9 +13,7 @@ import { Droppable, Draggable } from 'react-beautiful-dnd';
 import Record from './Record';
 
 export default function Shelf({ records, shelf, dispatch }) {
-  const shelfRecords = shelf.records.map(id =>
-    records.find(record => id === record.id),
-  );
+  const shelfRecords = shelf.records.map(id => records[id]);
 
   const [renaming, setRenaming] = useState(false);
   const [inputName, setInputName] = useState(shelf.name);

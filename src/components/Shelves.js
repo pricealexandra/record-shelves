@@ -4,7 +4,7 @@ import { Button, Input, List } from '@mui/material';
 
 import Shelf from './Shelf';
 
-export default function Shelves({ records, shelves, dispatch }) {
+export default function Shelves({ state, dispatch }) {
   const [adding, setAdding] = useState(false);
   const [inputName, setInputName] = useState('');
 
@@ -28,10 +28,10 @@ export default function Shelves({ records, shelves, dispatch }) {
           overflow: 'scroll',
         }}
       >
-        {Object.values(shelves).map(shelf => (
+        {Object.values(state.shelves).map(shelf => (
           <Shelf
             key={shelf.id}
-            records={records}
+            records={state.shelvedRecords}
             shelf={shelf}
             dispatch={dispatch}
           />

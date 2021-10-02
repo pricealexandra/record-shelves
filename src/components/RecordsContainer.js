@@ -3,7 +3,7 @@ import { Pagination } from '@mui/material';
 
 import Record from './Record';
 
-export default function RecordsContainer({ records, recordPages, fetchRecords, shelves, dispatch }) {
+export default function RecordsContainer({ recordPages, fetchRecords, state, dispatch }) {
   const changePage = (event, page) => {
     fetchRecords(page)
   }
@@ -19,11 +19,11 @@ export default function RecordsContainer({ records, recordPages, fetchRecords, s
           overflow: 'scroll',
         }}
       >
-        {records.map(record => (
+        {state.displayedRecords.map(record => (
           <Record
             key={record.id}
             record={record}
-            shelves={shelves}
+            state={state}
             dispatch={dispatch}
           />
         ))}
