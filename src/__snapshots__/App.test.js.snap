@@ -5,256 +5,295 @@ exports[`App can add a shelf 1`] = `
   <div
     class="MuiContainer-root MuiContainer-maxWidthLg css-1oqqzyl-MuiContainer-root"
   >
-    <h1>
-      Record Shelves App
-    </h1>
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+      class="MuiBox-root css-k008qs"
     >
-      <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3 css-j23p4t-MuiGrid-root"
+      <nav
+        class="MuiBox-root css-ql7syg"
       >
-        <h2>
-          Records
-        </h2>
-        <nav
-          aria-label="pagination navigation"
-          class="MuiPagination-root MuiPagination-text css-1oj2twp-MuiPagination-root"
+        <div
+          class="MuiDrawer-root MuiDrawer-docked css-f7jlii-MuiDrawer-docked"
         >
-          <ul
-            class="MuiPagination-ul css-wjh20t-MuiPagination-ul"
-          >
-            <li>
-              <button
-                aria-label="Go to previous page"
-                class="MuiButtonBase-root Mui-disabled MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular Mui-disabled MuiPaginationItem-previousNext css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root"
-                disabled=""
-                tabindex="-1"
-                type="button"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiPaginationItem-icon css-g2z002-MuiSvgIcon-root-MuiPaginationItem-icon"
-                  data-testid="NavigateBeforeIcon"
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
-                  />
-                </svg>
-              </button>
-            </li>
-            <li>
-              <button
-                aria-current="true"
-                aria-label="page 1"
-                class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular Mui-selected MuiPaginationItem-page css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root"
-                tabindex="0"
-                type="button"
-              >
-                1
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
-              </button>
-            </li>
-            <li>
-              <button
-                aria-label="Go to page 2"
-                class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-page css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root"
-                tabindex="0"
-                type="button"
-              >
-                2
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
-              </button>
-            </li>
-            <li>
-              <button
-                aria-label="Go to page 3"
-                class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-page css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root"
-                tabindex="0"
-                type="button"
-              >
-                3
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
-              </button>
-            </li>
-            <li>
-              <button
-                aria-label="Go to page 4"
-                class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-page css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root"
-                tabindex="0"
-                type="button"
-              >
-                4
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
-              </button>
-            </li>
-            <li>
-              <button
-                aria-label="Go to page 5"
-                class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-page css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root"
-                tabindex="0"
-                type="button"
-              >
-                5
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
-              </button>
-            </li>
-            <li>
-              <div
-                aria-label="Go to end-ellipsis page"
-                class="MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-ellipsis css-1v2lvtn-MuiPaginationItem-root"
-              >
-                …
-              </div>
-            </li>
-            <li>
-              <button
-                aria-label="Go to page 10"
-                class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-page css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root"
-                tabindex="0"
-                type="button"
-              >
-                10
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
-              </button>
-            </li>
-            <li>
-              <button
-                aria-label="Go to next page"
-                class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-previousNext css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root"
-                tabindex="0"
-                type="button"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiPaginationItem-icon css-g2z002-MuiSvgIcon-root-MuiPaginationItem-icon"
-                  data-testid="NavigateNextIcon"
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
-                  />
-                </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
-              </button>
-            </li>
-          </ul>
-        </nav>
-        <ul
-          class="MuiList-root MuiList-padding css-h4y409-MuiList-root"
-          style="background-color: rgb(245, 245, 245); height: calc(100vh - 12rem); overflow: scroll;"
-        >
-          <li
-            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-1p823my-MuiListItem-root"
+          <div
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiDrawer-paper MuiDrawer-paperAnchorLeft MuiDrawer-paperAnchorDockedLeft css-12i7wg6-MuiPaper-root-MuiDrawer-paper"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-bhp9pd-MuiPaper-root-MuiCard-root"
-              style="width: 260px;"
+              class="MuiBox-root css-1l9w60"
             >
-              <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-              >
-                <p>
-                  Title: Dirty Dancing
-                </p>
-                <p>
-                  Artist(s):Swayzak
-                </p>
-                <p>
-                  Label: !K7 Records
-                </p>
-                <p>
-                  Formats: Vinyl
-                </p>
-              </div>
-              <div
-                class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
-              >
-                <div
-                  class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
-                  style="min-width: 140px;"
+              <div>
+                <h2
+                  style="display: inline-block; width: 60%; padding: 10px;"
                 >
-                  <label
-                    class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
-                    data-shrink="false"
-                    id="add-to-shelf"
-                  >
-                    Add to shelf
-                  </label>
+                  Record Catalog
+                </h2>
+                <button
+                  class="MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButtonBase-root css-d1syou-MuiButtonBase-root-MuiButton-root"
+                  tabindex="0"
+                  type="button"
+                >
+                  Close
+                  <span
+                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                  />
+                </button>
+              </div>
+              <nav
+                aria-label="pagination navigation"
+                class="MuiPagination-root MuiPagination-text css-1heyzb9-MuiPagination-root"
+              >
+                <ul
+                  class="MuiPagination-ul css-wjh20t-MuiPagination-ul"
+                >
+                  <li>
+                    <button
+                      aria-label="Go to previous page"
+                      class="MuiButtonBase-root Mui-disabled MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-textPrimary Mui-disabled MuiPaginationItem-previousNext css-1to7aaw-MuiButtonBase-root-MuiPaginationItem-root"
+                      disabled=""
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiPaginationItem-icon css-g2z002-MuiSvgIcon-root-MuiPaginationItem-icon"
+                        data-testid="NavigateBeforeIcon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+                        />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      aria-current="true"
+                      aria-label="page 1"
+                      class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-textPrimary Mui-selected MuiPaginationItem-page css-1to7aaw-MuiButtonBase-root-MuiPaginationItem-root"
+                      tabindex="0"
+                      type="button"
+                    >
+                      1
+                      <span
+                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                      />
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      aria-label="Go to page 2"
+                      class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-textPrimary MuiPaginationItem-page css-1to7aaw-MuiButtonBase-root-MuiPaginationItem-root"
+                      tabindex="0"
+                      type="button"
+                    >
+                      2
+                      <span
+                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                      />
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      aria-label="Go to page 3"
+                      class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-textPrimary MuiPaginationItem-page css-1to7aaw-MuiButtonBase-root-MuiPaginationItem-root"
+                      tabindex="0"
+                      type="button"
+                    >
+                      3
+                      <span
+                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                      />
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      aria-label="Go to page 4"
+                      class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-textPrimary MuiPaginationItem-page css-1to7aaw-MuiButtonBase-root-MuiPaginationItem-root"
+                      tabindex="0"
+                      type="button"
+                    >
+                      4
+                      <span
+                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                      />
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      aria-label="Go to page 5"
+                      class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-textPrimary MuiPaginationItem-page css-1to7aaw-MuiButtonBase-root-MuiPaginationItem-root"
+                      tabindex="0"
+                      type="button"
+                    >
+                      5
+                      <span
+                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                      />
+                    </button>
+                  </li>
+                  <li>
+                    <div
+                      aria-label="Go to end-ellipsis page"
+                      class="MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-textPrimary MuiPaginationItem-ellipsis css-1v2lvtn-MuiPaginationItem-root"
+                    >
+                      …
+                    </div>
+                  </li>
+                  <li>
+                    <button
+                      aria-label="Go to page 10"
+                      class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-textPrimary MuiPaginationItem-page css-1to7aaw-MuiButtonBase-root-MuiPaginationItem-root"
+                      tabindex="0"
+                      type="button"
+                    >
+                      10
+                      <span
+                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                      />
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      aria-label="Go to next page"
+                      class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-textPrimary MuiPaginationItem-previousNext css-1to7aaw-MuiButtonBase-root-MuiPaginationItem-root"
+                      tabindex="0"
+                      type="button"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiPaginationItem-icon css-g2z002-MuiSvgIcon-root-MuiPaginationItem-icon"
+                        data-testid="NavigateNextIcon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+                        />
+                      </svg>
+                      <span
+                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                      />
+                    </button>
+                  </li>
+                </ul>
+              </nav>
+              <ul
+                class="MuiList-root MuiList-padding css-h4y409-MuiList-root"
+                style="background-color: rgb(227, 242, 253); overflow: scroll;"
+              >
+                <li
+                  class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-1p823my-MuiListItem-root"
+                >
                   <div
-                    class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
-                    data-testid="add-shelf"
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-g84bbc-MuiPaper-root-MuiCard-root"
                   >
                     <div
-                      aria-expanded="false"
-                      aria-haspopup="listbox"
-                      aria-labelledby="add-to-shelf"
-                      class="MuiSelect-select MuiSelect-outlined MuiOutlinedInput-input MuiInputBase-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
-                      role="button"
-                      tabindex="0"
+                      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
                     >
-                      <span
-                        class="notranslate"
-                      >
-                        ​
-                      </span>
+                      <p>
+                        Title: Dirty Dancing
+                      </p>
+                      <p>
+                        Artist(s):Swayzak
+                      </p>
+                      <p>
+                        Label: !K7 Records
+                      </p>
+                      <p>
+                        Formats: Vinyl
+                      </p>
                     </div>
-                    <input
-                      aria-hidden="true"
-                      class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
-                      tabindex="-1"
-                      value=""
-                    />
-                    <svg
-                      aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-hfutr2-MuiSvgIcon-root-MuiSelect-icon"
-                      data-testid="ArrowDropDownIcon"
-                      focusable="false"
-                      viewBox="0 0 24 24"
+                    <div
+                      class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
                     >
-                      <path
-                        d="M7 10l5 5 5-5z"
-                      />
-                    </svg>
-                    <fieldset
-                      aria-hidden="true"
-                      class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
-                    >
-                      <legend
-                        class="css-dhh0px"
+                      <div
+                        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+                        style="min-width: 140px;"
                       >
-                        <span>
+                        <label
+                          class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+                          data-shrink="false"
+                          id="add-to-shelf"
+                        >
                           Add to shelf
-                        </span>
-                      </legend>
-                    </fieldset>
+                        </label>
+                        <div
+                          class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+                          data-testid="add-shelf"
+                        >
+                          <div
+                            aria-expanded="false"
+                            aria-haspopup="listbox"
+                            aria-labelledby="add-to-shelf"
+                            class="MuiSelect-select MuiSelect-outlined MuiOutlinedInput-input MuiInputBase-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+                            role="button"
+                            tabindex="0"
+                          >
+                            <span
+                              class="notranslate"
+                            >
+                              ​
+                            </span>
+                          </div>
+                          <input
+                            aria-hidden="true"
+                            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+                            tabindex="-1"
+                            value=""
+                          />
+                          <svg
+                            aria-hidden="true"
+                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-hfutr2-MuiSvgIcon-root-MuiSelect-icon"
+                            data-testid="ArrowDropDownIcon"
+                            focusable="false"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                          <fieldset
+                            aria-hidden="true"
+                            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+                          >
+                            <legend
+                              class="css-dhh0px"
+                            >
+                              <span>
+                                Add to shelf
+                              </span>
+                            </legend>
+                          </fieldset>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
+                </li>
+              </ul>
             </div>
-          </li>
-        </ul>
-      </div>
+          </div>
+        </div>
+      </nav>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-9 css-l4g9cp-MuiGrid-root"
+        class="MuiBox-root css-i9gxme"
       >
+        <div
+          class="MuiBox-root css-1bvc4cc"
+        >
+          <button
+            class="MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButtonBase-root css-7pfrbe-MuiButtonBase-root-MuiButton-root"
+            tabindex="0"
+            type="button"
+          >
+            View Catalog
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </button>
+        </div>
+        <h1>
+          Record Shelves App
+        </h1>
         <h2>
           Shelves
         </h2>
@@ -319,195 +358,234 @@ exports[`App can remove a shelf 1`] = `
   <div
     class="MuiContainer-root MuiContainer-maxWidthLg css-1oqqzyl-MuiContainer-root"
   >
-    <h1>
-      Record Shelves App
-    </h1>
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+      class="MuiBox-root css-k008qs"
     >
-      <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3 css-j23p4t-MuiGrid-root"
+      <nav
+        class="MuiBox-root css-ql7syg"
       >
-        <h2>
-          Records
-        </h2>
-        <nav
-          aria-label="pagination navigation"
-          class="MuiPagination-root MuiPagination-text css-1oj2twp-MuiPagination-root"
+        <div
+          class="MuiDrawer-root MuiDrawer-docked css-f7jlii-MuiDrawer-docked"
         >
-          <ul
-            class="MuiPagination-ul css-wjh20t-MuiPagination-ul"
-          >
-            <li>
-              <button
-                aria-label="Go to previous page"
-                class="MuiButtonBase-root Mui-disabled MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular Mui-disabled MuiPaginationItem-previousNext css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root"
-                disabled=""
-                tabindex="-1"
-                type="button"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiPaginationItem-icon css-g2z002-MuiSvgIcon-root-MuiPaginationItem-icon"
-                  data-testid="NavigateBeforeIcon"
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
-                  />
-                </svg>
-              </button>
-            </li>
-            <li>
-              <button
-                aria-current="true"
-                aria-label="page 1"
-                class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular Mui-selected MuiPaginationItem-page css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root"
-                tabindex="0"
-                type="button"
-              >
-                1
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
-              </button>
-            </li>
-            <li>
-              <button
-                aria-label="Go to page 2"
-                class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-page css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root"
-                tabindex="0"
-                type="button"
-              >
-                2
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
-              </button>
-            </li>
-            <li>
-              <button
-                aria-label="Go to page 3"
-                class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-page css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root"
-                tabindex="0"
-                type="button"
-              >
-                3
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
-              </button>
-            </li>
-            <li>
-              <button
-                aria-label="Go to page 4"
-                class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-page css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root"
-                tabindex="0"
-                type="button"
-              >
-                4
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
-              </button>
-            </li>
-            <li>
-              <button
-                aria-label="Go to page 5"
-                class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-page css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root"
-                tabindex="0"
-                type="button"
-              >
-                5
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
-              </button>
-            </li>
-            <li>
-              <div
-                aria-label="Go to end-ellipsis page"
-                class="MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-ellipsis css-1v2lvtn-MuiPaginationItem-root"
-              >
-                …
-              </div>
-            </li>
-            <li>
-              <button
-                aria-label="Go to page 10"
-                class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-page css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root"
-                tabindex="0"
-                type="button"
-              >
-                10
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
-              </button>
-            </li>
-            <li>
-              <button
-                aria-label="Go to next page"
-                class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-previousNext css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root"
-                tabindex="0"
-                type="button"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiPaginationItem-icon css-g2z002-MuiSvgIcon-root-MuiPaginationItem-icon"
-                  data-testid="NavigateNextIcon"
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
-                  />
-                </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
-              </button>
-            </li>
-          </ul>
-        </nav>
-        <ul
-          class="MuiList-root MuiList-padding css-h4y409-MuiList-root"
-          style="background-color: rgb(245, 245, 245); height: calc(100vh - 12rem); overflow: scroll;"
-        >
-          <li
-            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-1p823my-MuiListItem-root"
+          <div
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiDrawer-paper MuiDrawer-paperAnchorLeft MuiDrawer-paperAnchorDockedLeft css-12i7wg6-MuiPaper-root-MuiDrawer-paper"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-bhp9pd-MuiPaper-root-MuiCard-root"
-              style="width: 260px;"
+              class="MuiBox-root css-1l9w60"
             >
-              <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-              >
-                <p>
-                  Title: Dirty Dancing
-                </p>
-                <p>
-                  Artist(s):Swayzak
-                </p>
-                <p>
-                  Label: !K7 Records
-                </p>
-                <p>
-                  Formats: Vinyl
-                </p>
+              <div>
+                <h2
+                  style="display: inline-block; width: 60%; padding: 10px;"
+                >
+                  Record Catalog
+                </h2>
+                <button
+                  class="MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButtonBase-root css-d1syou-MuiButtonBase-root-MuiButton-root"
+                  tabindex="0"
+                  type="button"
+                >
+                  Close
+                  <span
+                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                  />
+                </button>
               </div>
-              <div
-                class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
-              />
+              <nav
+                aria-label="pagination navigation"
+                class="MuiPagination-root MuiPagination-text css-1heyzb9-MuiPagination-root"
+              >
+                <ul
+                  class="MuiPagination-ul css-wjh20t-MuiPagination-ul"
+                >
+                  <li>
+                    <button
+                      aria-label="Go to previous page"
+                      class="MuiButtonBase-root Mui-disabled MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-textPrimary Mui-disabled MuiPaginationItem-previousNext css-1to7aaw-MuiButtonBase-root-MuiPaginationItem-root"
+                      disabled=""
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiPaginationItem-icon css-g2z002-MuiSvgIcon-root-MuiPaginationItem-icon"
+                        data-testid="NavigateBeforeIcon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+                        />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      aria-current="true"
+                      aria-label="page 1"
+                      class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-textPrimary Mui-selected MuiPaginationItem-page css-1to7aaw-MuiButtonBase-root-MuiPaginationItem-root"
+                      tabindex="0"
+                      type="button"
+                    >
+                      1
+                      <span
+                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                      />
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      aria-label="Go to page 2"
+                      class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-textPrimary MuiPaginationItem-page css-1to7aaw-MuiButtonBase-root-MuiPaginationItem-root"
+                      tabindex="0"
+                      type="button"
+                    >
+                      2
+                      <span
+                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                      />
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      aria-label="Go to page 3"
+                      class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-textPrimary MuiPaginationItem-page css-1to7aaw-MuiButtonBase-root-MuiPaginationItem-root"
+                      tabindex="0"
+                      type="button"
+                    >
+                      3
+                      <span
+                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                      />
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      aria-label="Go to page 4"
+                      class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-textPrimary MuiPaginationItem-page css-1to7aaw-MuiButtonBase-root-MuiPaginationItem-root"
+                      tabindex="0"
+                      type="button"
+                    >
+                      4
+                      <span
+                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                      />
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      aria-label="Go to page 5"
+                      class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-textPrimary MuiPaginationItem-page css-1to7aaw-MuiButtonBase-root-MuiPaginationItem-root"
+                      tabindex="0"
+                      type="button"
+                    >
+                      5
+                      <span
+                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                      />
+                    </button>
+                  </li>
+                  <li>
+                    <div
+                      aria-label="Go to end-ellipsis page"
+                      class="MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-textPrimary MuiPaginationItem-ellipsis css-1v2lvtn-MuiPaginationItem-root"
+                    >
+                      …
+                    </div>
+                  </li>
+                  <li>
+                    <button
+                      aria-label="Go to page 10"
+                      class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-textPrimary MuiPaginationItem-page css-1to7aaw-MuiButtonBase-root-MuiPaginationItem-root"
+                      tabindex="0"
+                      type="button"
+                    >
+                      10
+                      <span
+                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                      />
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      aria-label="Go to next page"
+                      class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-textPrimary MuiPaginationItem-previousNext css-1to7aaw-MuiButtonBase-root-MuiPaginationItem-root"
+                      tabindex="0"
+                      type="button"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiPaginationItem-icon css-g2z002-MuiSvgIcon-root-MuiPaginationItem-icon"
+                        data-testid="NavigateNextIcon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+                        />
+                      </svg>
+                      <span
+                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                      />
+                    </button>
+                  </li>
+                </ul>
+              </nav>
+              <ul
+                class="MuiList-root MuiList-padding css-h4y409-MuiList-root"
+                style="background-color: rgb(227, 242, 253); overflow: scroll;"
+              >
+                <li
+                  class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-1p823my-MuiListItem-root"
+                >
+                  <div
+                    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-g84bbc-MuiPaper-root-MuiCard-root"
+                  >
+                    <div
+                      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                    >
+                      <p>
+                        Title: Dirty Dancing
+                      </p>
+                      <p>
+                        Artist(s):Swayzak
+                      </p>
+                      <p>
+                        Label: !K7 Records
+                      </p>
+                      <p>
+                        Formats: Vinyl
+                      </p>
+                    </div>
+                    <div
+                      class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
+                    />
+                  </div>
+                </li>
+              </ul>
             </div>
-          </li>
-        </ul>
-      </div>
+          </div>
+        </div>
+      </nav>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-9 css-l4g9cp-MuiGrid-root"
+        class="MuiBox-root css-i9gxme"
       >
+        <div
+          class="MuiBox-root css-1bvc4cc"
+        >
+          <button
+            class="MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButtonBase-root css-7pfrbe-MuiButtonBase-root-MuiButton-root"
+            tabindex="0"
+            type="button"
+          >
+            View Catalog
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </button>
+        </div>
+        <h1>
+          Record Shelves App
+        </h1>
         <h2>
           Shelves
         </h2>

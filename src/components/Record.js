@@ -13,7 +13,7 @@ import {
 export default function Record({ record, shelf, state, dispatch }) {
   return (
     <ListItem key={record.id}>
-      <Card style={{ width: '260px' }}>
+      <Card sx={{ width: '300px', margin: '0 auto' }}>
         <CardContent>
           <p>Title: {record.title}</p>
           <p>Artist(s):{record.artists.join(', ')}</p>

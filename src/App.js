@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useReducer, useState } from 'react';
 
-import { Container, Grid } from '@mui/material';
+import { Container, Button, Box } from '@mui/material';
 
 import { DragDropContext } from 'react-beautiful-dnd';
 
@@ -10,10 +10,11 @@ import RecordsContainer from './components/RecordsContainer';
 import Shelves from './components/Shelves';
 
 export default function App() {
-  const [totalRecordPages, setTotalRecordPages] = useState();
+  const [totalRecordPages, setTotalRecordPages] = useState(10);
   const [recordPage, setRecordPage] = useState(1);
+  const [isRecordDrawerOpen, setIsRecordDrawerOpen] = useState(false);
 
-  const [state, dispatch] = useReducer(reducer, {displayedRecords: [], shelvedRecords: {}, shelves: {}});
+  const [state, dispatch] = useReducer(reducer, { displayedRecords: [], shelvedRecords: {}, shelves: {} });
 
   const onDragEnd = useCallback(
     result => {
@@ -48,50 +49,53 @@ export default function App() {
   }
 
   useEffect(() => {
-      fetch(
-        `https://api.discogs.com/users/blacklight/collection/folders/0/releases?page=${recordPage}&per_page=10`,
-      )
-        .then(resp => resp.json())
-        .then(json => {
-          const currentRecords = json.releases.map(release => {
-              const { id, basic_information: info } = release;
-              return {
-                id: `${id}`,
-                title: info.title,
-                formats: info.formats.map(format => format.name),
-                label: info.labels?.[0]?.name ?? '',
-                artists: info.artists.map(artist => artist.name),
-                date: info.year,
-              };
-            });
-          dispatch({
-            type: 'updateDisplayedRecords',
-            displayedRecords: currentRecords,
-          })
-          setTotalRecordPages(json.pagination.pages)
+    fetch(
+      `https://api.discogs.com/users/blacklight/collection/folders/0/releases?page=${recordPage}&per_page=10`,
+    )
+      .then(resp => resp.json())
+      .then(json => {
+        const currentRecords = json.releases.map(release => {
+          const { id, basic_information: info } = release;
+          return {
+            id: `${id}`,
+            title: info.title,
+            formats: info.formats.map(format => format.name),
+            label: info.labels?.[0]?.name ?? '',
+            artists: info.artists.map(artist => artist.name),
+            date: info.year,
+          };
         });
-    }, [recordPage]);
+        dispatch({
+          type: 'updateDisplayedRecords',
+          displayedRecords: currentRecords,
+        })
+        setTotalRecordPages(json.pagination.pages)
+      });
+  }, [recordPage]);
 
   return (
     <Container>
-      <h1>Record Shelves App</h1>
-
-      <Grid container spacing={3}>
-        <Grid item xs={3}>
+      <Box sx={{ display: 'flex' }}>
+        <Box component="nav" sx={{ width: '350px', flexShrink: { sm: 0 }, display: { xs: isRecordDrawerOpen ? 'block' : 'none', sm: 'block' } }}>
           <RecordsContainer
             recordPages={totalRecordPages}
             fetchRecords={fetchRecords}
             state={state}
             dispatch={dispatch}
+            isRecordDrawerOpen={isRecordDrawerOpen}
+            setIsRecordDrawerOpen={setIsRecordDrawerOpen}
           />
-        </Grid>
-
-        <Grid item xs={9}>
+        </Box>
+        <Box sx={{ flexGrow: 1 }}>
+          <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
+            <Button onClick={() => setIsRecordDrawerOpen(true)} sx={{ display: { xs: 'flex', sm: 'none' }, marginTop: '15px' }} variant="outlined">View Catalog</Button>
+          </Box>
+          <h1>Record Shelves App</h1>
           <DragDropContext onDragEnd={onDragEnd}>
             <Shelves state={state} dispatch={dispatch} />
           </DragDropContext>
-        </Grid>
-      </Grid>
+        </Box>
+      </Box>
     </Container>
   );
 }
