@@ -89,7 +89,7 @@ export const reducer = (state, action) => {
         }
       };
     case 'moveBetweenShelves':
-      const newShelf = [...state[action.newShelf].records];
+      const newShelf = [...state.shelves[action.newShelf].records];
       newShelf.splice(
         action.newIndex,
         0,
