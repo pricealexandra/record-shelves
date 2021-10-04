@@ -275,7 +275,7 @@ exports[`App can add a shelf 1`] = `
         </div>
       </nav>
       <div
-        class="MuiBox-root css-i9gxme"
+        class="MuiBox-root css-1a03f5w"
       >
         <div
           class="MuiBox-root css-1bvc4cc"
@@ -299,45 +299,48 @@ exports[`App can add a shelf 1`] = `
         </h2>
         <ul
           class="MuiList-root MuiList-padding css-h4y409-MuiList-root"
-          style="height: calc(100vh - 12rem); overflow: scroll;"
         >
           <div
             class="MuiBox-root css-0"
-            style="display: flex; align-items: center; justify-content: space-between;"
           >
-            <h3
-              style="cursor: pointer;"
+            <div
+              class="MuiBox-root css-0"
+              style="display: flex; align-items: center; justify-content: space-between;"
             >
-              first shelf
-            </h3>
-            <button
-              class="MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButtonBase-root css-1rwt2y5-MuiButtonBase-root-MuiButton-root"
-              style="margin-left: 1rem;"
-              tabindex="0"
-              type="button"
+              <h3
+                style="cursor: pointer;"
+              >
+                first shelf
+              </h3>
+              <button
+                class="MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButtonBase-root css-1rwt2y5-MuiButtonBase-root-MuiButton-root"
+                style="margin-left: 1rem;"
+                tabindex="0"
+                type="button"
+              >
+                Remove
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </button>
+            </div>
+            <li
+              class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-1p823my-MuiListItem-root"
+              style="background-color: rgb(245, 245, 245); min-height: 10rem; margin-bottom: 1rem;"
             >
-              Remove
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
-            </button>
+              <ul
+                class="MuiList-root MuiList-padding css-h4y409-MuiList-root"
+                data-testid="shelf"
+                style="display: flex; flex-direction: row; overflow: scroll;"
+              >
+                <p>
+                  No records in shelf
+                </p>
+              </ul>
+            </li>
           </div>
-          <li
-            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-1p823my-MuiListItem-root"
-            style="background-color: rgb(245, 245, 245); min-height: 10rem; margin-bottom: 1rem;"
-          >
-            <ul
-              class="MuiList-root MuiList-padding css-h4y409-MuiList-root"
-              data-testid="shelf"
-              style="display: flex; flex-direction: row; overflow: scroll;"
-            >
-              <p>
-                No records in shelf
-              </p>
-            </ul>
-          </li>
           <button
-            class="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root css-sghohy-MuiButtonBase-root-MuiButton-root"
+            class="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root css-1s46zzy-MuiButtonBase-root-MuiButton-root"
             tabindex="0"
             type="button"
           >
@@ -567,7 +570,7 @@ exports[`App can remove a shelf 1`] = `
         </div>
       </nav>
       <div
-        class="MuiBox-root css-i9gxme"
+        class="MuiBox-root css-1a03f5w"
       >
         <div
           class="MuiBox-root css-1bvc4cc"
@@ -591,10 +594,9 @@ exports[`App can remove a shelf 1`] = `
         </h2>
         <ul
           class="MuiList-root MuiList-padding css-h4y409-MuiList-root"
-          style="height: calc(100vh - 12rem); overflow: scroll;"
         >
           <button
-            class="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root css-sghohy-MuiButtonBase-root-MuiButton-root"
+            class="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root css-1s46zzy-MuiButtonBase-root-MuiButton-root"
             tabindex="0"
             type="button"
           >

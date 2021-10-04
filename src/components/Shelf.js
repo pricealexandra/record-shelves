@@ -24,7 +24,7 @@ export default function Shelf({ records, shelf, dispatch }) {
   }, [dispatch, inputName, shelf]);
 
   return (
-    <>
+    <Box>
       <Box
         style={{
           display: 'flex',
@@ -82,6 +82,7 @@ export default function Shelf({ records, shelf, dispatch }) {
                   >
                     {(provided, snapshot) => (
                       <span
+                        style={{display: 'inline-block'}}
                         key={record.id}
                         ref={provided.innerRef}
                         {...provided.draggableProps}
@@ -103,6 +104,6 @@ export default function Shelf({ records, shelf, dispatch }) {
           )}
         </Droppable>
       </ListItem>
-    </>
+    </Box>
   );
 }

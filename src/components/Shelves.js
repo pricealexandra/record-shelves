@@ -22,12 +22,7 @@ export default function Shelves({ state, dispatch }) {
   return (
     <>
       <h2>Shelves</h2>
-      <List
-        style={{
-          height: 'calc(100vh - 12rem)',
-          overflow: 'scroll',
-        }}
-      >
+      <List>
         {Object.values(state.shelves).map(shelf => (
           <Shelf
             key={shelf.id}
@@ -56,7 +51,7 @@ export default function Shelves({ state, dispatch }) {
             </Button>
           </form>
         ) : (
-          <Button variant="contained" onClick={() => setAdding(true)}>
+          <Button variant="contained" onClick={() => setAdding(true)} sx={{display: 'block'}}>
             Add Shelf
           </Button>
         )}

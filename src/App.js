@@ -86,7 +86,7 @@ export default function App() {
             setIsRecordDrawerOpen={setIsRecordDrawerOpen}
           />
         </Box>
-        <Box sx={{ flexGrow: 1 }}>
+        <Box sx={{ flexGrow: 1, width: { xs: '100%', sm: 'calc(100% - 350px)' }}}>
           <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
             <Button onClick={() => setIsRecordDrawerOpen(true)} sx={{ display: { xs: 'flex', sm: 'none' }, marginTop: '15px' }} variant="outlined">View Catalog</Button>
           </Box>
